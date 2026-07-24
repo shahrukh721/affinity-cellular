@@ -287,16 +287,29 @@ ul{list-style:none;margin:0;padding:0;}
 
 /* ---- Mobile: full single-column stack ---- */
 @media (max-width:768px){
-  .site-header{padding:12px 0;}
-  .header-trust{border-left:none;padding-left:0;}
+  /* Compact header: logo + CALL NOW on row 1, tap-to-call below */
+  .site-header{padding:10px 0;}
+  .header-inner{display:grid;grid-template-columns:1fr auto;grid-template-areas:"logo cta" "call call";align-items:center;gap:8px 12px;}
+  .logo{grid-area:logo;}
+  .logo-affinity{font-size:23px;}
+  .logo-cellular{font-size:9px;letter-spacing:3px;}
+  .header-trust{display:none;}
+  .header-cta{grid-area:cta;padding:11px 18px;font-size:14px;align-self:center;}
+  .header-call{grid-area:call;margin:0;display:flex;flex-wrap:wrap;align-items:baseline;justify-content:center;gap:2px 8px;text-align:center;}
+  .call-tag{display:none;}
+  .call-number{font-size:22px;}
+  .call-hours{width:100%;font-size:11px;}
 
+  /* Hero: tighter spacing, feature points side by side */
   .hero{display:flex;flex-direction:column;}
   .hero-inner{display:block;order:1;min-height:0;}
-  .hero-copy{max-width:none;padding:30px 0 6px;text-align:center;}
-  .hero-copy h1{font-size:34px;}
-  .hero-sub{margin:16px auto 22px;}
-  .hero-points{justify-content:center;gap:36px;}
-  .hero-media{position:relative;order:2;left:auto;right:auto;top:auto;bottom:auto;width:100%;height:300px;margin-top:6px;}
+  .hero-copy{max-width:none;padding:22px 0 4px;text-align:center;}
+  .hero-copy h1{font-size:32px;}
+  .hero-sub{margin:12px auto 16px;font-size:16px;}
+  .hero-points{display:flex;justify-content:center;gap:24px;flex-wrap:nowrap;}
+  .hero-points li{font-size:13px;gap:8px;text-align:left;}
+  .hero-points i{font-size:24px;}
+  .hero-media{position:relative;order:2;left:auto;right:auto;top:auto;bottom:auto;width:100%;height:260px;margin-top:14px;}
   .hero-img{-webkit-mask-image:none;mask-image:none;border-radius:8px;}
   .price-card{order:3;position:static;right:auto;bottom:auto;margin:-46px auto 8px;transform:none;}
 
@@ -318,9 +331,11 @@ ul{list-style:none;margin:0;padding:0;}
 /* ---- Small phones ---- */
 @media (max-width:480px){
   .container{padding:0 16px;}
-  .hero-copy h1{font-size:29px;}
-  .hero-sub{font-size:16px;}
-  .hero-points{flex-direction:column;gap:16px;align-items:center;}
+  .hero-copy h1{font-size:27px;}
+  .hero-sub{font-size:15px;}
+  .hero-points{gap:16px;}
+  .hero-points li{font-size:12px;}
+  .hero-points i{font-size:20px;}
   .overpay-amount{font-size:60px;}
   .enough-list{grid-template-columns:repeat(5,1fr);gap:6px;}
   .enough-list i{font-size:22px;}
