@@ -213,8 +213,8 @@ ul{list-style:none;margin:0;padding:0;}
    OFFER BANNER
    ============================================================ */
 .offer-banner{background:#fff;padding:6px 0 30px;}
-.offer-inner{background:var(--tan);border:1px solid var(--tan-border);border-radius:12px;display:flex;align-items:center;justify-content:center;gap:34px;padding:24px 30px;flex-wrap:wrap;}
-.offer-item{display:flex;align-items:center;gap:16px;}
+.offer-inner{background:var(--tan);border:1px solid var(--tan-border);border-radius:12px;display:flex;align-items:center;justify-content:space-between;gap:28px;padding:22px 44px;flex-wrap:wrap;max-width:1120px;}
+.offer-item{display:flex;align-items:center;gap:18px;flex:1;}
 .offer-icon-gift{width:56px;height:56px;border-radius:50%;background:var(--gold);color:#fff;display:flex;align-items:center;justify-content:center;font-size:26px;flex-shrink:0;}
 .offer-small{margin:0;font-family:"Montserrat",sans-serif;font-weight:800;font-size:13px;color:var(--ink);letter-spacing:.4px;}
 .offer-big{margin:1px 0;font-family:"Montserrat",sans-serif;font-weight:900;font-size:30px;color:var(--red);line-height:1;}
