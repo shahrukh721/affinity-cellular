@@ -133,8 +133,8 @@ ul{list-style:none;margin:0;padding:0;}
    CALCULATOR
    ============================================================ */
 .calc-section{background:#fff;padding:34px 0;}
-.calc-grid{display:grid;grid-template-columns:400px 1fr;gap:26px;align-items:start;}
-.calc-card{background:var(--card);border:1px solid var(--card-border);border-radius:12px;padding:26px 26px 30px;}
+.calc-grid{display:grid;grid-template-columns:1fr 1fr;gap:26px;align-items:stretch;}
+.calc-card{background:var(--card);border:1px solid var(--card-border);border-radius:12px;padding:26px 26px 30px;display:flex;flex-direction:column;}
 
 /* ----- Form ----- */
 .form-title{text-align:center;color:var(--navy);font-weight:800;font-size:19px;letter-spacing:.3px;margin-bottom:22px;}
