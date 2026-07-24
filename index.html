@@ -2,7 +2,17 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" id="viewport" content="width=device-width, initial-scale=1.0">
+  <script>
+    /* The design is a fixed mobile composition. On phones narrower than the
+       500px design canvas, render on a 500px viewport scaled to fit so the
+       exact multi-column layout is preserved. Tablets/desktops use native width. */
+    (function () {
+      var vp = document.getElementById("viewport");
+      var w = screen.width || window.innerWidth;
+      if (w < 500) vp.setAttribute("content", "width=500");
+    })();
+  </script>
   <title>Affinity Cellular — See How Much You Could Save On Your Cell Phone Bill</title>
   <meta name="description" content="Most seniors are paying for data and features they don't use. See how much you could save with Affinity Cellular. Plans starting at just $15/mo after a 3-month free trial.">
 
