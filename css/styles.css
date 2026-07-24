@@ -133,7 +133,7 @@ ul{list-style:none;margin:0;padding:0;}
    CALCULATOR
    ============================================================ */
 .calc-section{background:#fff;padding:34px 0;}
-.calc-grid{display:grid;grid-template-columns:1fr 1fr;gap:26px;align-items:stretch;}
+.calc-grid{display:grid;grid-template-columns:0.84fr 1.16fr;gap:26px;align-items:stretch;}
 .calc-card{background:var(--card);border:1px solid var(--card-border);border-radius:12px;padding:26px 26px 30px;display:flex;flex-direction:column;}
 
 /* ----- Form ----- */
@@ -177,6 +177,7 @@ ul{list-style:none;margin:0;padding:0;}
 .secure-note i{color:var(--green);margin-right:4px;}
 
 /* ----- Results ----- */
+.results-card{justify-content:space-between;}
 .results-title{text-align:center;color:var(--navy);font-weight:800;font-size:20px;letter-spacing:.3px;margin-bottom:18px;}
 .good-news{display:flex;align-items:center;gap:14px;justify-content:center;margin-bottom:14px;}
 .check-circle{width:52px;height:52px;border-radius:50%;background:var(--green);color:#fff;display:flex;align-items:center;justify-content:center;font-size:26px;flex-shrink:0;}
