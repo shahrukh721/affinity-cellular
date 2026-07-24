@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Affinity Cellular — See How Much You Could Save On Your Cell Phone Bill</title>
+  <meta name="description" content="Most seniors are paying for data and features they don't use. See how much you could save with Affinity Cellular. Plans starting at just $15/mo after a 3-month free trial.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- ============ HEADER ============ -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="logo">
+        <span class="logo-affinity">Affinity</span>
+        <span class="logo-cellular">CELLULAR<sup>&reg;</sup></span>
+      </div>
+
+      <div class="header-trust">
+        <div class="years-badge">
+          <span class="years-num">15</span>
+          <span class="years-label">YEARS</span>
+        </div>
+        <div class="years-text">
+          <strong>OF TRUSTED SERVICE</strong>
+          <span>Proudly serving seniors<br>for over 15 years.</span>
+        </div>
+      </div>
+
+      <div class="header-call">
+        <p class="call-tag">Call Now! We're Here to Help</p>
+        <a href="tel:8557638221" class="call-number"><i class="fa-solid fa-phone-volume"></i> 855-763-8221</a>
+        <p class="call-hours">Mon-Fri 8am-8pm CT | Sat-Sun 10am-7pm CT</p>
+      </div>
+
+      <a href="tel:8557638221" class="btn btn-red header-cta"><i class="fa-solid fa-phone"></i> CALL NOW</a>
+    </div>
+  </header>
+
+  <!-- ============ HERO ============ -->
+  <section class="hero">
+    <div class="container hero-inner">
+      <div class="hero-copy">
+        <h1>See How Much You<br>Could Save On Your<br>Cell Phone Bill</h1>
+        <p class="hero-sub">Most seniors are surprised to learn they're paying for data and features they don't actually use.</p>
+        <ul class="hero-points">
+          <li><i class="fa-regular fa-clock"></i><span>Takes less than<br>60 seconds</span></li>
+          <li><i class="fa-solid fa-shield-halved"></i><span>100% Free.<br>No obligation.</span></li>
+        </ul>
+      </div>
+
+      <div class="hero-visual">
+        <img src="images/hero-couple.jpg" alt="Senior couple happily looking at a smartphone together" class="hero-img">
+        <div class="price-card">
+          <p class="price-card-top">PLANS STARTING AT JUST</p>
+          <p class="price-card-amount"><span class="dollar">$</span><span class="big">15</span><span class="per">/mo.</span></p>
+          <p class="price-card-note">AFTER 3 MONTH<br>FREE TRIAL</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ COUNTDOWN BAR ============ -->
+  <section class="countdown-bar">
+    <div class="container countdown-inner">
+      <div class="countdown-left">
+        <i class="fa-solid fa-stopwatch countdown-icon"></i>
+        <div class="countdown-text">
+          <p class="countdown-head"><span class="hurry">HURRY!</span> THIS OFFER WON'T LAST!</p>
+          <p class="countdown-desc">Thousands of seniors switch every month.</p>
+        </div>
+      </div>
+      <div class="countdown-right">
+        <div class="countdown-timer" id="countdown">
+          <div class="time-box"><span class="time-num" data-unit="days">02</span><span class="time-label">DAYS</span></div>
+          <div class="time-box"><span class="time-num" data-unit="hours">14</span><span class="time-label">HRS</span></div>
+          <div class="time-box"><span class="time-num" data-unit="minutes">37</span><span class="time-label">MIN</span></div>
+          <div class="time-box"><span class="time-num" data-unit="seconds">26</span><span class="time-label">SEC</span></div>
+        </div>
+        <p class="countdown-fine">3 MONTH FREE TRIAL IS ONLY AVAILABLE FOR A LIMITED TIME.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CALCULATOR ============ -->
+  <section class="calc-section">
+    <div class="container calc-grid">
+
+      <!-- LEFT: form -->
+      <form class="calc-card form-card" id="savingsForm">
+        <h2 class="form-title">1. TELL US ABOUT YOUR<br>CURRENT SERVICE</h2>
+
+        <fieldset class="field">
+          <legend>Current Carrier</legend>
+          <label class="radio-row"><input type="radio" name="carrier" value="Verizon" checked><span class="radio-dot"></span>Verizon</label>
+          <label class="radio-row"><input type="radio" name="carrier" value="AT&T"><span class="radio-dot"></span>AT&amp;T</label>
+          <label class="radio-row"><input type="radio" name="carrier" value="T-Mobile"><span class="radio-dot"></span>T-Mobile</label>
+          <label class="radio-row"><input type="radio" name="carrier" value="Consumer Cellular"><span class="radio-dot"></span>Consumer Cellular</label>
+          <label class="radio-row"><input type="radio" name="carrier" value="Mint Mobile"><span class="radio-dot"></span>Mint Mobile</label>
+          <label class="radio-row"><input type="radio" name="carrier" value="Other"><span class="radio-dot"></span>Other</label>
+        </fieldset>
+
+        <div class="field">
+          <label class="field-label" for="bill">About How Much Is Your<br>Monthly Phone Bill?</label>
+          <p class="bill-value"><span class="bill-amount">$<span id="billValue">142</span></span><span class="bill-per">/month</span></p>
+          <input type="range" id="bill" name="bill" min="20" max="250" step="1" value="142" class="slider">
+          <div class="slider-ends"><span>$20</span><span>$250+</span></div>
+        </div>
+
+        <div class="field">
+          <span class="field-label">How Many Phone Lines?</span>
+          <div class="line-toggle" role="group">
+            <button type="button" class="line-btn active" data-lines="1">1 LINE</button>
+            <button type="button" class="line-btn" data-lines="2">2 LINES</button>
+            <button type="button" class="line-btn" data-lines="3">3+ LINES</button>
+          </div>
+        </div>
+
+        <fieldset class="field">
+          <legend>How Much Data Do You Actually Use?</legend>
+          <label class="radio-row"><input type="radio" name="data" value="calls" checked><span class="radio-dot"></span>Mostly calls and texts</label>
+          <label class="radio-row"><input type="radio" name="data" value="browsing"><span class="radio-dot"></span>Some web browsing and email</label>
+          <label class="radio-row"><input type="radio" name="data" value="social"><span class="radio-dot"></span>Social media and YouTube</label>
+          <label class="radio-row"><input type="radio" name="data" value="streaming"><span class="radio-dot"></span>Heavy streaming</label>
+        </fieldset>
+
+        <fieldset class="field">
+          <legend>Do You Want To Keep Your Current Phone?</legend>
+          <label class="radio-row"><input type="radio" name="keep" value="yes" checked><span class="radio-dot"></span>Yes</label>
+          <label class="radio-row"><input type="radio" name="keep" value="no"><span class="radio-dot"></span>No</label>
+          <label class="radio-row"><input type="radio" name="keep" value="notsure"><span class="radio-dot"></span>Not Sure</label>
+        </fieldset>
+
+        <button type="submit" class="btn btn-red btn-block btn-calc">CALCULATE MY SAVINGS <i class="fa-solid fa-arrow-right"></i></button>
+        <p class="secure-note"><i class="fa-solid fa-lock"></i> Your information is secure and never shared.</p>
+      </form>
+
+      <!-- RIGHT: results -->
+      <div class="calc-card results-card">
+        <h2 class="results-title">YOUR PERSONALIZED RESULTS</h2>
+
+        <div class="good-news">
+          <span class="check-circle"><i class="fa-solid fa-check"></i></span>
+          <div>
+            <p class="good-head">GOOD NEWS!</p>
+            <p class="good-sub">Based on your answers...</p>
+          </div>
+        </div>
+
+        <p class="paying-around">You're likely paying around</p>
+        <p class="overpay-amount">$<span id="overpay">92</span></p>
+        <p class="overpay-label">MORE EACH MONTH <span>than necessary.</span></p>
+
+        <div class="results-rows">
+          <div class="result-row">
+            <span class="result-icon icon-navy"><i class="fa-solid fa-file-lines"></i></span>
+            <span class="result-text">Estimated Current<br>Annual Cost</span>
+            <span class="result-num navy">$<span id="currentAnnual">1,704</span><small>/year</small></span>
+          </div>
+          <div class="result-row">
+            <span class="result-icon icon-green"><i class="fa-solid fa-piggy-bank"></i></span>
+            <span class="result-text">Estimated Annual Cost<br>With Affinity Cellular</span>
+            <span class="result-num navy">$<span id="affinityAnnual">720</span><small>/year</small></span>
+          </div>
+          <div class="result-row savings-row">
+            <span class="result-icon icon-gold"><i class="fa-solid fa-sack-dollar"></i></span>
+            <span class="result-text green bold">ESTIMATED ANNUAL<br>SAVINGS</span>
+            <span class="result-num green big">$<span id="annualSavings">984</span><small>/year</small></span>
+          </div>
+        </div>
+
+        <div class="enough-bar">THAT'S ENOUGH TO PAY FOR:</div>
+        <ul class="enough-list">
+          <li><i class="fa-solid fa-gift"></i><span>Holiday<br>gifts</span></li>
+          <li><i class="fa-solid fa-capsules"></i><span>Prescription<br>costs</span></li>
+          <li><i class="fa-solid fa-suitcase-rolling"></i><span>Weekend<br>getaway</span></li>
+          <li><i class="fa-solid fa-house"></i><span>Utility<br>bills</span></li>
+          <li><i class="fa-solid fa-shield-halved"></i><span>Emergency<br>savings</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ OFFER BANNER ============ -->
+  <section class="offer-banner">
+    <div class="container offer-inner">
+      <div class="offer-item">
+        <span class="offer-icon-gift"><i class="fa-solid fa-gift"></i></span>
+        <div>
+          <p class="offer-small">LIMITED-TIME OFFER</p>
+          <p class="offer-big">3 MONTHS FREE</p>
+          <p class="offer-desc">Unlimited Talk, Text &amp; Data</p>
+        </div>
+      </div>
+      <span class="offer-plus"><i class="fa-solid fa-plus"></i></span>
+      <div class="offer-item">
+        <span class="offer-phone-icon"><i class="fa-solid fa-mobile-screen-button"></i></span>
+        <div>
+          <p class="offer-iphone-head">ELIGIBLE IPHONE OFFER<br>AFTER 12 MONTHS</p>
+          <p class="offer-desc">This limited-time promotion is<br>available to qualifying new customers.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TESTIMONIALS ============ -->
+  <section class="testimonials">
+    <div class="container">
+      <div class="testi-head">
+        <h2>SEE WHAT OTHER SENIORS ARE SAYING</h2>
+        <div class="testi-rating">
+          <span class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span>
+          <span class="rating-num">4.8 OUT OF 5 STARS</span>
+          <span class="rating-count">OVER 25,000+ REVIEWS</span>
+        </div>
+      </div>
+
+      <div class="testi-grid">
+        <article class="testi-card">
+          <span class="stars stars-sm"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span>
+          <p class="testi-quote">"My Verizon bill was over $120 every month. Switching to Affinity literally cut it in half and I haven't noticed any difference in coverage."</p>
+          <div class="testi-person">
+            <img src="images/review-linda.jpg" alt="Linda M." class="testi-avatar">
+            <div>
+              <p class="testi-name">Linda M.</p>
+              <p class="testi-loc">Florida</p>
+              <p class="testi-verified"><i class="fa-solid fa-circle-check"></i> Verified Customer</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="testi-card">
+          <span class="stars stars-sm"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span>
+          <p class="testi-quote">"I was worried I'd lose my phone number. The entire process took less than an hour and everything transferred perfectly."</p>
+          <div class="testi-person">
+            <img src="images/review-richard.jpg" alt="Richard T." class="testi-avatar">
+            <div>
+              <p class="testi-name">Richard T.</p>
+              <p class="testi-loc">Ohio</p>
+              <p class="testi-verified"><i class="fa-solid fa-circle-check"></i> Verified Customer</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="testi-card">
+          <span class="stars stars-sm"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span>
+          <p class="testi-quote">"The customer service was incredible. They answered every question I had and helped me choose the right plan."</p>
+          <div class="testi-person">
+            <img src="images/review-patricia.jpg" alt="Patricia K." class="testi-avatar">
+            <div>
+              <p class="testi-name">Patricia K.</p>
+              <p class="testi-loc">Arizona</p>
+              <p class="testi-verified"><i class="fa-solid fa-circle-check"></i> Verified Customer</p>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER CTA ============ -->
+  <section class="footer-cta">
+    <div class="container footer-inner">
+      <div class="footer-left">
+        <span class="footer-phone-circle"><i class="fa-solid fa-phone"></i></span>
+        <div class="footer-copy">
+          <h2>READY TO STOP OVERPAYING?</h2>
+          <ul class="footer-checks">
+            <li><i class="fa-solid fa-check"></i> 3 Months FREE</li>
+            <li><i class="fa-solid fa-check"></i> Plans Starting At Just $15/Month</li>
+            <li><i class="fa-solid fa-check"></i> Same Reliable Verizon Nationwide Coverage</li>
+          </ul>
+        </div>
+      </div>
+      <a href="tel:8557638221" class="footer-call-btn">
+        <span class="footer-call-tag">CALL NOW TO SPEAK WITH<br>A U.S.-BASED SPECIALIST</span>
+        <span class="footer-call-num"><i class="fa-solid fa-phone"></i> 855-763-8221</span>
+      </a>
+      <img src="images/rep-headset.jpg" alt="U.S.-based customer service specialist wearing a headset" class="footer-rep">
+    </div>
+  </section>
+
+  <footer class="legal-footer">
+    <div class="container">
+      <p>&copy; 2026 Affinity Cellular. All rights reserved. Plans, pricing, and promotions subject to change and available to qualifying new customers. Coverage on nationwide network. This is a demonstration landing page.</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
