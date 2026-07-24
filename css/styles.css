@@ -266,160 +266,63 @@ ul{list-style:none;margin:0;padding:0;}
 
 /* ============================================================
    RESPONSIVE
-   The design is a MOBILE mockup: the layout keeps the SAME
-   multi-column composition at every width (never stacks) and
-   simply scales down. Phones < 500px are rendered on a 500px
-   canvas via a viewport override (see index.html) so they show
-   this exact composition, scaled to fit.
+   The provided screenshot is the DESKTOP design. Below the
+   desktop breakpoint the layout follows standard responsive
+   rules: sections stack into a single, readable column with
+   touch-friendly controls (no cramped multi-column scaling).
    ============================================================ */
 
-/* ---- Tablet (768–1000): keep every section multi-column ---- */
+/* ---- Tablet: stack the calculator, keep hero two-up ---- */
 @media (max-width:1000px){
-  .header-inner{gap:14px;}
-  .call-number{font-size:22px;}
-  .header-cta{padding:12px 16px;font-size:13px;}
-  .hero-copy{padding:36px 16px 30px 0;}
-  .hero-copy h1{font-size:40px;}
-  .calc-grid{grid-template-columns:minmax(0,0.9fr) minmax(0,1.2fr);}
-  .calc-card{padding:20px 18px 22px;}
+  .header-inner{flex-wrap:wrap;justify-content:center;gap:16px;}
+  .header-trust{padding-left:16px;}
+  .header-call{margin-left:0;}
+  .hero-copy h1{font-size:42px;}
+  .calc-grid{grid-template-columns:1fr;gap:24px;}
+  .form-card,.results-card{max-width:640px;margin:0 auto;width:100%;}
 }
 
-/* ---- Mobile (<=767): compact version of the SAME layout ---- */
-@media (max-width:767px){
-  .container{padding:0 12px;}
+/* ---- Mobile: full single-column stack ---- */
+@media (max-width:768px){
+  .site-header{padding:12px 0;}
+  .header-trust{border-left:none;padding-left:0;}
 
-  /* header — single dense row, matching the mockup */
-  .site-header{padding:10px 0;}
-  .header-inner{gap:8px;flex-wrap:nowrap;align-items:center;}
-  .logo{flex-shrink:1;}
-  .logo-affinity{font-size:19px;}
-  .logo-cellular{font-size:7.5px;letter-spacing:2.5px;}
-  .header-trust{padding-left:8px;gap:6px;}
-  .years-badge{width:34px;height:34px;border-width:2px;}
-  .years-num{font-size:13px;}
-  .years-label{font-size:5px;letter-spacing:.5px;}
-  .years-text strong{font-size:8px;}
-  .years-text span{font-size:7px;line-height:1.15;}
-  .call-tag{font-size:7.5px;}
-  .call-number{font-size:15px;}
-  .call-number i{font-size:10px;margin-right:2px;}
-  .call-hours{font-size:6.5px;}
-  .header-cta{padding:8px 9px;font-size:9.5px;gap:4px;border-radius:6px;}
+  .hero-inner{grid-template-columns:1fr;}
+  .hero-copy{padding:32px 0 8px;text-align:center;}
+  .hero-copy h1{font-size:34px;}
+  .hero-sub{margin:16px auto 22px;}
+  .hero-points{justify-content:center;gap:36px;}
+  .hero-visual{display:block;position:relative;min-height:0;margin-bottom:52px;}
+  .hero-img{position:relative;inset:auto;width:100%;height:300px;border-radius:8px;}
+  .price-card{left:50%;right:auto;transform:translateX(-50%);bottom:-42px;}
 
-  /* hero — copy left, photo + price card right */
-  .hero-inner{grid-template-columns:1fr 1fr;gap:10px;min-height:0;}
-  .hero-copy{padding:18px 8px 18px 0;align-self:center;}
-  .hero-copy h1{font-size:25px;line-height:1.08;}
-  .hero-sub{font-size:11.5px;margin:9px 0 13px;max-width:none;}
-  .hero-points{gap:14px;}
-  .hero-points li{font-size:9.5px;gap:6px;}
-  .hero-points i{font-size:18px;}
-  .hero-visual{display:flex;align-self:stretch;position:relative;}
-  .hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}
-  .price-card{right:0;bottom:14px;min-width:118px;padding:10px 12px;transform:none;}
-  .price-card-top{font-size:8px;}
-  .price-card-amount .dollar{font-size:18px;margin-top:3px;}
-  .price-card-amount .big{font-size:40px;}
-  .price-card-amount .per{font-size:14px;margin-bottom:4px;}
-  .price-card-note{font-size:9px;}
+  .countdown-inner{flex-direction:column;text-align:center;gap:16px;}
+  .countdown-left{flex-direction:column;text-align:center;gap:10px;}
 
-  /* countdown */
-  .countdown-bar{padding:12px 0;}
-  .countdown-inner{gap:10px;flex-wrap:nowrap;}
-  .countdown-icon{font-size:30px;}
-  .countdown-head{font-size:13px;}
-  .countdown-desc{font-size:9px;}
-  .countdown-timer{gap:5px;}
-  .time-box{width:40px;padding:5px 0 4px;}
-  .time-num{font-size:19px;}
-  .time-label{font-size:6.5px;}
-  .countdown-fine{font-size:7px;margin-top:6px;}
+  .offer-inner{flex-direction:column;text-align:center;gap:16px;}
+  .offer-item{flex-direction:column;text-align:center;}
 
-  /* calculator — two columns, form + results */
-  .calc-section{padding:20px 0;}
-  .calc-grid{grid-template-columns:0.88fr 1.12fr;gap:10px;}
-  .calc-card{padding:14px 12px 16px;border-radius:8px;}
-  .form-title{font-size:13px;margin-bottom:14px;}
-  .field{margin-bottom:12px;}
-  .field:not(:last-of-type){padding-bottom:12px;}
-  .field legend,.field-label{font-size:10.5px;margin-bottom:8px;}
-  .radio-row{font-size:10.5px;gap:7px;padding:3px 0;}
-  .radio-dot{width:14px;height:14px;}
-  .radio-row input:checked ~ .radio-dot::after{inset:2px;}
-  .bill-amount{font-size:24px;}
-  .bill-per{font-size:12px;}
-  .slider{height:6px;}
-  .slider-ends{font-size:9px;}
-  .slider::-webkit-slider-thumb{width:18px;height:18px;}
-  .slider::-moz-range-thumb{width:18px;height:18px;}
-  .line-toggle{gap:6px;}
-  .line-btn{padding:9px 2px;font-size:9.5px;}
-  .btn-calc{padding:11px;font-size:11px;}
-  .secure-note{font-size:8px;}
+  .testi-head{flex-direction:column;text-align:center;gap:12px;}
+  .testi-grid{grid-template-columns:1fr;max-width:480px;margin:0 auto;}
 
-  /* results */
-  .results-title{font-size:13px;margin-bottom:12px;}
-  .good-news{gap:8px;margin-bottom:8px;}
-  .check-circle{width:34px;height:34px;font-size:17px;}
-  .good-head{font-size:17px;}
-  .good-sub{font-size:11px;}
-  .paying-around{font-size:13px;}
-  .overpay-amount{font-size:48px;}
-  .overpay-label{font-size:12px;margin-bottom:12px;}
-  .overpay-label span{font-size:10px;}
-  .result-row{gap:8px;padding:10px 2px;}
-  .result-icon{width:32px;height:32px;font-size:15px;}
-  .result-text{font-size:10px;}
-  .result-text.bold{font-size:10.5px;}
-  .result-num{font-size:15px;}
-  .result-num.big{font-size:18px;}
-  .result-num small{font-size:8px;}
-  .enough-bar{font-size:9.5px;padding:8px;margin:6px 0 12px;}
-  .enough-list{grid-template-columns:repeat(5,1fr);gap:4px;}
-  .enough-list li{font-size:8px;gap:5px;}
-  .enough-list i{font-size:18px;}
+  .footer-inner{flex-direction:column;text-align:center;gap:18px;}
+  .footer-left{flex-direction:column;text-align:center;}
+  .footer-call-btn{width:100%;max-width:440px;}
+  .footer-rep{margin:0 auto;}
+}
 
-  /* offer banner */
-  .offer-banner{padding:4px 0 20px;}
-  .offer-inner{gap:12px;padding:14px;flex-wrap:nowrap;}
-  .offer-item{gap:10px;}
-  .offer-icon-gift{width:38px;height:38px;font-size:17px;}
-  .offer-small{font-size:9px;}
-  .offer-big{font-size:20px;}
-  .offer-desc{font-size:9.5px;}
-  .offer-plus{width:28px;height:28px;font-size:12px;}
-  .offer-phone-icon{font-size:34px;}
-  .offer-iphone-head{font-size:11px;}
-
-  /* testimonials — 3 across */
-  .testimonials{padding:6px 0 24px;}
-  .testi-head{flex-wrap:nowrap;gap:10px;margin-bottom:14px;}
-  .testi-head h2{font-size:16px;}
-  .testi-rating{gap:6px;}
-  .stars{font-size:12px;letter-spacing:1px;}
-  .rating-num,.rating-count{font-size:9px;}
-  .testi-grid{grid-template-columns:repeat(3,1fr);gap:10px;}
-  .testi-card{padding:12px;border-radius:8px;}
-  .stars-sm{font-size:11px;}
-  .testi-quote{font-size:10px;line-height:1.4;margin:8px 0 12px;}
-  .testi-person{gap:8px;}
-  .testi-avatar{width:36px;height:36px;}
-  .testi-name{font-size:10.5px;}
-  .testi-loc{font-size:9px;}
-  .testi-verified{font-size:8.5px;}
-
-  /* footer cta */
-  .footer-cta{padding:18px 0;}
-  .footer-inner{gap:12px;flex-wrap:nowrap;}
-  .footer-left{gap:10px;flex-direction:row;text-align:left;min-width:0;flex:1;}
-  .footer-phone-circle{width:36px;height:36px;font-size:16px;}
-  .footer-copy h2{font-size:15px;margin-bottom:5px;}
-  .footer-checks li{font-size:9.5px;}
-  .footer-checks i{margin-right:5px;}
-  .footer-call-btn{padding:10px 14px;}
-  .footer-call-tag{font-size:8px;}
-  .footer-call-num{font-size:19px;}
-  .footer-call-num i{font-size:14px;}
-  .footer-rep{width:70px;height:70px;border-width:2px;}
-  .legal-footer p{font-size:9px;}
+/* ---- Small phones ---- */
+@media (max-width:480px){
+  .container{padding:0 16px;}
+  .hero-copy h1{font-size:29px;}
+  .hero-sub{font-size:16px;}
+  .hero-points{flex-direction:column;gap:16px;align-items:center;}
+  .overpay-amount{font-size:60px;}
+  .enough-list{grid-template-columns:repeat(5,1fr);gap:6px;}
+  .enough-list i{font-size:22px;}
+  .enough-list li{font-size:9.5px;}
+  .result-text{font-size:14px;}
+  .result-num{font-size:20px;}
+  .result-num.big{font-size:24px;}
+  .form-title,.results-title{font-size:18px;}
 }
