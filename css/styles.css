@@ -133,8 +133,9 @@ ul{list-style:none;margin:0;padding:0;}
    CALCULATOR
    ============================================================ */
 .calc-section{background:#fff;padding:34px 0;}
-.calc-grid{display:grid;grid-template-columns:0.84fr 1.16fr;gap:26px;align-items:stretch;}
-.calc-card{background:var(--card);border:1px solid var(--card-border);border-radius:12px;padding:26px 26px 30px;display:flex;flex-direction:column;}
+.calc-grid{display:grid;grid-template-columns:0.84fr 1.16fr;gap:24px;align-items:stretch;max-width:1120px;margin:0 auto;}
+.calc-card{background:var(--card);border:1px solid var(--card-border);border-radius:12px;padding:24px 24px 26px;display:flex;flex-direction:column;}
+.form-card{background:#e9efe8;border-color:#d8e0d6;}   /* subtle green-grey (left) */
 
 /* ----- Form ----- */
 .form-title{text-align:center;color:var(--navy);font-weight:800;font-size:19px;letter-spacing:.3px;margin-bottom:22px;}
@@ -177,7 +178,6 @@ ul{list-style:none;margin:0;padding:0;}
 .secure-note i{color:var(--green);margin-right:4px;}
 
 /* ----- Results ----- */
-.results-card{justify-content:space-between;}
 .results-title{text-align:center;color:var(--navy);font-weight:800;font-size:20px;letter-spacing:.3px;margin-bottom:18px;}
 .good-news{display:flex;align-items:center;gap:14px;justify-content:center;margin-bottom:14px;}
 .check-circle{width:52px;height:52px;border-radius:50%;background:var(--green);color:#fff;display:flex;align-items:center;justify-content:center;font-size:26px;flex-shrink:0;}
@@ -204,7 +204,7 @@ ul{list-style:none;margin:0;padding:0;}
 .result-num small{font-size:12px;font-weight:700;margin-left:1px;}
 .savings-row{border-bottom:none;}
 
-.enough-bar{background:var(--navy);color:#fff;text-align:center;font-family:"Montserrat",sans-serif;font-weight:800;font-size:14px;letter-spacing:.4px;padding:11px;border-radius:6px;margin:8px 0 18px;}
+.enough-bar{background:var(--navy);color:#fff;text-align:center;font-family:"Montserrat",sans-serif;font-weight:800;font-size:14px;letter-spacing:.4px;padding:11px;border-radius:6px;margin:auto 0 18px;}
 .enough-list{display:grid;grid-template-columns:repeat(5,1fr);gap:6px;}
 .enough-list li{display:flex;flex-direction:column;align-items:center;gap:9px;text-align:center;font-size:12.5px;font-weight:600;color:var(--ink);line-height:1.2;}
 .enough-list i{font-size:30px;color:var(--navy);}
